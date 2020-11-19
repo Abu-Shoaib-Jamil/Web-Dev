@@ -9,6 +9,435 @@
     <script src="https://kit.fontawesome.com/f6c45c778e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="band website.css">
     <title>Sample Website</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           }
+            body *{
+                z-index: -1;
+            }
+            .nav-ul{
+                position: sticky;
+                top: 0;
+                left: 0;
+                list-style-type: none; 
+                height: 48px;
+                background-color: black;
+                box-shadow: 1px 1px 5px black;
+                z-index: 1;
+            }
+            .nav-ul::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .nav-ul>li>a{
+                text-decoration: none;
+                display: inline-block;
+                padding: 15px 25px;
+                text-transform: uppercase;
+                color: white;
+            }
+            .nav-ul>li{
+                float: left;
+                text-align: center;
+            }
+            #drpdwn-a{
+                position: relative;
+            }
+            #drpdwn-a::after{
+                content: "";
+                border-width: 5px;
+                border-style: solid;
+                border-color: white transparent transparent transparent;
+                position: absolute;
+                top: 50%;
+                right: 10%;
+                transform: translateY(-25%);
+            }
+            #drpdwn-content{
+                list-style-type: none;
+                text-align: left;
+                box-shadow: 1px 1px 5px rgb(32, 32, 32);
+                background-color: white;
+                z-index: 1;
+                display:none;
+            }
+            #drpdwn-content>li>a{
+                display: block;
+                text-decoration: none;
+                padding: 10px 20px;
+                color: black;
+            }
+            #drpdwn-li{
+                position: relative;
+            }
+            .nav-ul>li:hover,#send:hover{
+                background-color: rgb(187, 187, 187);
+            }
+            .nav-ul>li:hover a,#send:hover{
+                color: black;
+            }
+            #drpdwn-li:hover #drpdwn-content{
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
+            #drpdwn-li:hover #drpdwn-a::after{
+                border-color: black transparent transparent transparent
+                ;
+            }
+            #drpdwn-content>li>a:hover{
+                background-color: whitesmoke;
+            }
+            .search{
+                height: inherit;
+                width: 50px;
+                float: right;
+                position: relative;
+            }
+            #search-icon{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 20px;
+                color: white;
+            }
+            .search:hover{
+                background-color: rgb(250, 69, 37);
+                cursor: pointer;
+            }
+            #body-img>img{
+                width: 100%;
+                position: relative;
+            }
+            #body-img>h3{
+                position: absolute;
+                top: 95%;
+                left: 50%;
+                color: white;
+                transform: translateX(-50%);
+            }
+            #body-img>p{
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                color: white;
+                transform: translateX(-50%);
+            }
+            #theband{
+                background-color: whitesmoke;
+                height: max-content;
+            }
+            .theband-content{
+                width: 50%;
+                padding: 50px 0px;
+                margin: auto;
+                text-align: center;
+            }
+            .theband-img img{
+                height: 153px;
+                width: 153px;
+                border-radius: 10px;
+            }
+            #bandmember1,#bandmember2,#bandmember3{
+                display: inline-block;
+                margin: 0px 30px;
+            }
+            #tour{
+                background-color: black;
+            }
+            .tour-details{
+                width: 60%;
+                margin: auto;
+                text-align: center;
+                padding: 80px 0px;
+            }
+            .month-details{
+                text-align: left;
+                color: rgb(70, 70, 70);
+                background-color: whitesmoke;
+            }
+            .sep-div,.oct-div,.nov-div{
+                padding: 8px 10px;
+                border-bottom: 1px solid rgb(70, 70, 70);
+            }
+            .sep-div>span:nth-child(2),.oct-div>span:nth-child(2){
+                margin-left: 10px;
+                padding: 3px 8px;
+                background-color: rgb(250, 69, 37);
+                color: white;
+            }
+            .nov-div{
+                padding: 3px;
+            }
+            .nov-div::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .nov-div>span:nth-child(1){
+                float: left;
+                transform: translate(10%,25%);
+            }
+            #nov-tic-left{
+                float: right;
+                padding: 5px 10px;
+                border-radius: 100%;
+                background-color: black;
+                color: white;
+            }
+            .ticket-section::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .ny,.ps,.sf{
+                max-width: 30%;
+                float: left;
+                margin: 0px 15px;
+                background-color: white;
+            }
+            .ny-img,.ps-img,.sf-img{
+                width: 100%;
+            }
+            .ny-img>img,.ps-img>img,.sf-img>img{
+                width: 100%;
+                height: auto;
+                opacity: 0.5;
+            }
+            .ny-img:hover>img,.ps-img:hover>img,.sf-img:hover>img{
+                opacity: 1;
+            }
+            .ny-details,.ps-details,.sf-details{
+                text-align: left;
+                padding: 10px 10px 20px 10px;
+            }
+            .ny-details>span,.ps-details>span,.sf-details>span{
+                padding: 10px;
+                background-color: black;
+                color: white;
+                cursor: pointer;
+            }
+            .contact-content{
+                background-color: white;
+                width: 50%;
+                margin: auto;
+                padding: 80px 0px;
+                text-align: center;
+            }
+            .add-cre::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .address,.credentials{
+                width: 50%;
+                float: left;
+                height: 100px;
+                text-align: left;
+            }
+            .map>span:nth-child(1),.phone>span:nth-child(1),.envelope>span:nth-child(1){
+                display: inline-block;
+                width: 25px;
+                padding: 0px 5px;
+            }
+            .map>span:nth-child(2),.phone>span:nth-child(2),.envelope>span:nth-child(2){
+                font-size: larger;
+                margin-left: 10px;
+                line-height: 25px;
+            }
+            .credentials{
+                padding: 5px;
+            }
+            #name,#email,#message,#send{
+                padding: 10px 5px;
+                margin-bottom: 10px;
+                border-radius: 0px;
+                border-style: solid;
+                border-width: 1px;
+                border-color: rgb(187, 187, 187);
+                text-overflow: ellipsis;
+            }
+            #email{
+                float: right;
+            }
+            .name-email::after{
+                content: "";
+                clear: both;
+                display:table;
+            }
+            #message{
+                display: block;
+                width: 100%;
+            }
+            #send{
+                float: right;
+                background-color: black;
+                padding: 10px 15px;
+                color: white;
+                outline: none;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+            .credentials::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .map-div>img{
+                width: 100%;
+                height: auto;
+            }
+            .mediaacc-content{
+                width: 30%;
+                margin: auto;
+                text-align: center;
+                padding: 50px 0px;
+            }
+            .media-links>span{
+                font-size: 24px;
+                margin: 0px 5px;
+                color: rgb(136, 135, 135);
+            }
+            .media-links{
+                margin-bottom:40px;
+            }
+            .mediaacc-content>p{    
+                color: rgb(136, 135, 135);
+            }
+
+            /*Responsivity*/
+
+            /*larger laptops and screens(1301px-1500px)*/
+            @media screen and (max-width:1500px){
+                .ny,.ps,.sf{
+                    float: none;
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 20px;
+                    max-width: 50%;
+                }
+                .credentials,.address{
+                    height: auto;
+                }
+                #name,#email,#messgae{
+                    float: none;
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            /*small laptops and screens(771px-1300px)*/
+            @media screen and (min-width:771px) and (max-width:1024px){
+                .theband-content{
+                    width: 60%;
+                }
+                .theband-img img{
+                    height: 280px;
+                    width: 50%;
+                }
+            }
+            @media screen and (min-width:1021px) and (max-width:1300px){
+                .theband-content{
+                    width: 60%;
+                }
+                .theband-img img{
+                    height: 280px;
+                    width: 50%;
+                }
+            }
+            @media screen and (max-width:1300px){
+                #bandmember1,#bandmember2,#bandmember3{
+                    display: block;
+                    margin-bottom: 40px;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+
+            /*Ipads and Tabs(481px-770px)*/
+            @media screen and (min-width:481px) and (max-width:580px){
+                .theband-content{
+                    width: 70%;
+                }
+                .theband-img img{
+                    height: 280px;
+                    width: 70%;
+                }
+            }
+            @media screen and (min-width:580px) and (max-width:770px){
+                .theband-content{
+                    width: 70%;
+                }
+                .theband-img img{
+                    height: 280px;
+                    width: 60%;
+                }
+            }
+            @media screen and (max-width:770px){
+                .search{
+                    display: none;
+                }
+                .nav-ul>li{
+                    float: none;
+                    display: block;
+                }
+                .nav-ul{
+                    height: auto;
+                }
+                .tour-details{
+                    width: 90%;
+                }
+                .address,.credentials{
+                    float: none;
+                    display: block;
+                    width: 100%;
+                }
+                .address{
+                    font-size: 3vw;
+                    word-wrap: break-word;
+                }
+                .map>span:nth-child(1),.phone>span:nth-child(1),.envelope>span:nth-child(1){
+                    padding: 0;        
+                }
+                .map>span:nth-child(2),.phone>span:nth-child(2),.envelope>span:nth-child(2){
+                    margin-left: 0px;
+                    line-height: 10vw;
+                }
+
+            }
+
+            /*Mobile phones(320px-480px)*/
+            @media screen and (min-width:400px) and (max-width:480px){
+                .theband-content{
+                    width: 90%;
+                }
+                .theband-img img{
+                    height: 280px;
+                    width: 80%;
+                }
+            }
+            @media screen and (max-width:400px){
+                .theband-content{
+                    width: 90%;
+                }
+                .theband-img img{
+                    height: 220px;
+                    width: 90%;
+                }
+            }
+            @media screen and (max-width:480px){
+                .ny,.ps,.sf{
+                    max-width: 100%;
+                }
+            }
+
+    </style>
 </head>
 <body>
 
