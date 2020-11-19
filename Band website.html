@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sample Website">
+    <meta name="keywords" content="HTMl,CSS">
+    <meta http-equiv="refresh" content="">
+    <script src="https://kit.fontawesome.com/f6c45c778e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="band website.css">
+    <title>Sample Website</title>
+</head>
+<body>
+
+    <!--Navigation bar-->
+
+    <ul class="nav-ul">
+        <li><a href="#body-img">Home</a></li>
+        <li><a href="#theband">Band</a></li>
+        <li><a href="#tour">Tour</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li id="drpdwn-li">
+            <a href="#" id="drpdwn-a">More</a>
+            <ul id="drpdwn-content">
+                <li><a href="#">Merchandise</a></li>
+                <li><a href="#">Extras</a></li>
+                <li><a href="#">Media</a></li>
+            </ul>
+        </li>
+        <div class="search">
+            <span id="search-icon"><i class="fas fa-search"></i></span>
+        </div>
+    </ul>
+
+    <!--Body imgs-->
+
+    <div id="body-img">
+        <img src="chicago.jpg" alt="#" title="Chicago">
+        <h3>Chicago</h3>
+        <p>A night cannot be forgotten!</p>
+    </div>
+
+    <!--Band members and detaisl-->
+
+    <div id="theband">
+        <div class="theband-content">
+            <h1>The Band</h1><br>
+            <p style="color: gray;font-style: italic;">We love music.</p><br>
+            <p style="text-align: justify;">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <br><br>
+            <div class="theband-img">
+                <div id="bandmember1">
+                    <h4>Name</h4><br>
+                    <img src="bandmember.jpg" alt="#" title="bandmember">
+                </div>
+                <div id="bandmember2">
+                    <h4>Name</h4><br>
+                    <img src="bandmember.jpg" alt="#" title="bandmember">
+                </div>
+                <div id="bandmember3">
+                    <h4>Name</h4><br>
+                    <img src="bandmember.jpg" alt="#" title="bandmember">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Tour and Ticket Section-->
+
+    <div id="tour">
+        <div class="tour-details">
+            <h1 style="color: white;">Tour Dates</h1><br>
+            <h5 style="color: gray;font-style: italic;">Remember to book your tickets!</h5><br>
+            <div class="month-details">
+                <div class="sep-div">
+                    <span>September</span>
+                    <span>Sold out</span>
+                </div>
+                <div class="oct-div">
+                    <span>October</span>
+                    <span>Sold out</span>
+                </div>
+                <div class="nov-div">
+                    <span>November</span>
+                    <span id="nov-tic-left">3</span>
+                </div>
+            </div><br>
+            <div class="ticket-section">
+                <div class="ny">
+                    <div class="ny-img">
+                        <img src="newyork.jpg" alt="#" title="New York">
+                    </div>
+                    <div class="ny-details">
+                        <h3>New York</h3><br>
+                        <p>Fri 27 Nov 2020</p><br>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p><br>
+                        <span>Buy Tickets</span>
+                    </div>
+                </div>
+                <div class="ps">
+                    <div class="ps-img">
+                        <img src="paris.jpg" alt="#" title="Paris">
+                    </div>
+                    <div class="ps-details">
+                        <h3>Paris</h3><br>
+                        <p>Sat 28 Nov 2020</p><br>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p><br>
+                        <span>Buy Tickets</span>
+                    </div>
+                </div>
+                <div class="sf">
+                    <div class="sf-img">
+                        <img src="sanfran.jpg" alt="#" title="San Francisco">
+                    </div>
+                    <div class="sf-details">
+                        <h3>San Francisco</h3><br>
+                        <p>Sun 29 Nov 2020</p><br>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p><br>
+                        <span>Buy Tickets</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Contact-->
+
+    <div id="contact">
+        <div class="contact-content">
+            <h1>Contact</h1><br>
+            <p style="color: gray;font-style: italic;">Fan? Drop a note!</p><br><br><br>
+            <div class="add-cre">
+                <div class="address">
+                    <div class="map">
+                        <span><i class="fas fa-map-marker-alt"></i></span>
+                        <span>Kolkata,IN</span>
+                    </div>
+                    <div class="phone">
+                        <span><i class="fas fa-phone"></i></span>
+                        <span>Phone: +91 8013422298</span>
+                    </div>
+                    <div class="envelope">
+                        <span><i class="fas fa-envelope"></i></span>
+                        <span>Email : reanimatedshaftain@gmail.com</span>
+                    </div>
+                </div>
+                <div class="credentials">
+                    <div class="name-email">
+                        <input id="name" type="text" name="Name" placeholder="Name">
+                        <input id="email" type="text" name="Email" placeholder="Email">
+                    </div>
+                    <input id="message" type="text" name="Message" placeholder="Message">
+                    <input type="button" id="send" name="send" value="Send">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Map img-->
+
+    <div class="map-div">
+        <img src="map.jpg" alt="#" title="Map">
+    </div>
+
+    <!--Media accounts-->
+
+    <div class="mediaacc">
+        <div class="mediaacc-content">
+            <div class="media-links">
+                <span><i class="fab fa-facebook"></i></span>
+                <span><i class="fab fa-instagram"></i></span>
+                <span><i class="fab fa-twitter"></i></span>
+                <span><i class="fab fa-linkedin"></i></span>
+            </div>
+            <p>Coded by <span style="text-decoration: underline;">Abu Shoaib Jamil</span></p>
+        </div>
+    </div>
+</body>
+</html>
